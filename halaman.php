@@ -76,8 +76,8 @@ $_SESSION['last_activity'] = time(); // update last activity time stamp
             <ul aria-labelledby="dropdownSubMenu1" class="dropdown-menu border-0 shadow">
               <li><a href="?p=cabang" class="dropdown-item"><i class='fas fa-map-marker-alt'></i> Cabang </a></li>
               <li><a href="?p=jabatan" class="dropdown-item"><i class='fas fa-satellite-dish'></i> Jabatan</a></li>
-              <li><a href="#" class="dropdown-item"><i class='fas fa-stream'></i> Divisi</a></li>
-              <li><a href="#" class="dropdown-item"><i class='fas fa-server'></i> Departemen</a></li>
+              <li><a href="?p=divisi" class="dropdown-item"><i class='fas fa-stream'></i> Divisi</a></li>
+              <li><a href="?p=departemen" class="dropdown-item"><i class='fas fa-server'></i> Departemen</a></li>
               <li><a href="#" class="dropdown-item"><i class='fas fa-tablet-alt'></i> Section</a></li>
               <li><a href="#" class="dropdown-item"><i class='fas fa-tag'></i> Status</a></li>
               <li><a href="#" class="dropdown-item"><i class='fas fa-plane'></i> Kota Tujuan</a></li>

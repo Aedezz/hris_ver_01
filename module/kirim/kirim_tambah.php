@@ -48,6 +48,66 @@ $date_create=date("Y-m-d H:i:s");
 			VALUES('$nama','$create_by','$date_create')");
 			header("Location: ../../?p=jabatan");
 		break;
+
+		case 'divisi':			
+			$divisi = $_POST['divisi'];	
+			$manajer = $_POST['manajer'];	
+			$jabatan = $_POST['jabatan'];	
+			$email = $_POST['email'];	
+			$supervisor = $_POST['supervisor'];	
+			$jabatan_spv = $_POST['jabatan_spv'];  // Fixed spelling
+			$email_spv = $_POST['email_spv'];
+		
+			// Ensure the number of values matches the columns
+			mysqli_query($koneksi, "INSERT INTO divisi(
+				divisi,
+				dibuat,
+				tgl_buat,
+				diupdate,
+				tgl_diupdate,
+				manajer,
+				email,
+				jabatan,
+				supervisor,
+				email_spv,
+				jabatan_spv
+			) VALUES (
+				'$divisi',
+				'$create_by',
+				'$date_create',
+				'$create_by',
+				'$date_create',
+				'$manajer',
+				'$email',
+				'$jabatan',
+				'$supervisor',
+				'$email_spv',
+				'$jabatan_spv'
+			)");
+		
+			// Redirect after successful insertion
+			header("Location: ../../?p=divisi");
+		break;
+		
+		case 'sect':			
+			$nama = $_POST['nama'];
+			
+			mysqli_query($koneksi, "INSERT INTO sect (
+				nama, 
+				dibuat, 
+				tgl_dibuat, 
+				diupdate, 
+				tgl_update
+			) VALUES (
+				'$nama', 
+				'$create_by', 
+				'$date_create', 
+				'$create_by', 
+				'$date_create'
+			)");
+			
+			header("Location: ../../?p=departemen");
+		break;		
 		
 	}
 ?>

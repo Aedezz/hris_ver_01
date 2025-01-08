@@ -36,6 +36,47 @@ $date_create=date("Y-m-d H:i:s");
 			mysqli_query($koneksi,"UPDATE jabatan SET nama='$nama',diupdate='$create_by',tgl_update='$date_create' WHERE kode='$kode'");
 			header("Location: ../../?p=jabatan");
 		break;
+
+		case 'divisi':
+			$kode = $_POST['kode'];
+			$divisi = $_POST['divisi'];
+			$manajer = $_POST['manajer'];
+			$jabatan = $_POST['jabatan'];
+			$email = $_POST['email'];
+			$supervisor = $_POST['supervisor'];
+			$jabatan_spv = $_POST['jabatan_spv'];
+			$email_spv = $_POST['email_spv'];
+		
+			mysqli_query($koneksi, "UPDATE divisi SET 
+				divisi = '$divisi', 
+				manajer = '$manajer', 
+				jabatan = '$jabatan', 
+				email = '$email', 
+				supervisor = '$supervisor', 
+				jabatan_spv = '$jabatan_spv', 
+				email_spv = '$email_spv', 
+				diupdate = '$create_by', 
+				tgl_diupdate = '$date_create' 
+				WHERE kode = '$kode'");
+				
+			header("Location: ../../?p=divisi");
+		break;
+
+		case 'sect':
+			$kode = $_POST['kode'];
+			$nama = $_POST['nama'];
+			
+			mysqli_query($koneksi, "UPDATE sect SET 
+				nama = '$nama', 
+				dibuat = '$create_by', 
+				tgl_dibuat = '$date_create',  
+				diupdate = '$create_by',
+				tgl_update = '$date_create'
+				WHERE kode = '$kode'");
+			
+			header("Location: ../../?p=departemen");
+		break;		
+		
 		
 		default:
 			# code...
