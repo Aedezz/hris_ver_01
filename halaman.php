@@ -149,8 +149,8 @@ $_SESSION['last_activity'] = time(); // update last activity time stamp
 		  <li class="nav-item dropdown">
             <a id="dropdownSubMenu1" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle"> <i class='fas fa-user-secret'></i> IT</a>
             <ul aria-labelledby="dropdownSubMenu1" class="dropdown-menu border-0 shadow">
-              <li><a href="#" class="dropdown-item">Barang </a></li>
-			  <li><a href="#" class="dropdown-item">Item </a></li>
+              <li><a href="?p=barang" class="dropdown-item">Barang </a></li>
+			  <li><a href="?p=item" class="dropdown-item">Item </a></li>
 			  <li><a href="#" class="dropdown-item">History </a></li>
 			  <li><a href="#" class="dropdown-item">Komputer </a></li>
 			  <li class="dropdown-divider"></li>

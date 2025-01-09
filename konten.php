@@ -131,6 +131,48 @@ case 'departemen':
 	}
 break;	
 
+case 'barang':  
+	$user=$idUser;
+	$menu="barang";
+	$cekmenu=mysqli_num_rows(mysqli_query($koneksi,"SELECT * FROM hak_akses WHERE user='$user' AND menu='$menu'"));
+	if($cekmenu==1)
+	{ 		                    
+		if($_GET['aksi']=='edit'){
+			include "module/barang/edit.php";
+		}
+		else if($_GET['aksi']=='tambah'){
+			include "module/barang/tambah.php";
+		}		
+		else{
+			include "module/barang/tampil.php";
+		} 
+}
+	else{
+		include "noakses.php";
+	}
+break;	
+
+case 'item':  
+	$user=$idUser;
+	$menu="item";
+	$cekmenu=mysqli_num_rows(mysqli_query($koneksi,"SELECT * FROM hak_akses WHERE user='$user' AND menu='$menu'"));
+	if($cekmenu==1)
+	{ 		                    
+		if($_GET['aksi']=='edit'){
+			include "module/item/edit.php";
+		}
+		else if($_GET['aksi']=='tambah'){
+			include "module/item/tambah.php";
+		}		
+		else{
+			include "module/item/tampil.php";
+		} 
+}
+	else{
+		include "noakses.php";
+	}
+break;	
+
 //TAMBAH DEFAULT MENU 	
 default:			           
 	include "module/dashboard/tampil.php";

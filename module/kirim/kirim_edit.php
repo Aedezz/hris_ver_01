@@ -75,7 +75,29 @@ $date_create=date("Y-m-d H:i:s");
 				WHERE kode = '$kode'");
 			
 			header("Location: ../../?p=departemen");
-		break;		
+		break;	
+		
+		case 'barang':
+			$id_barang = $_POST['id_barang'];
+			$nama_barang = $_POST['nama_barang'];
+			
+			mysqli_query($koneksi, "UPDATE barang SET 
+				nama_barang = '$nama_barang' 
+				WHERE id_barang = '$id_barang'");
+			
+			header("Location: ../../?p=barang");
+		break;
+		
+		case 'item':
+			$id_item = $_POST['id_item'];
+			$nama_item = $_POST['nama_item'];
+			
+			mysqli_query($koneksi, "UPDATE item SET 
+				nama_item = '$nama_item' 
+				WHERE id_item = '$id_item'");
+			
+			header("Location: ../../?p=item");
+		break;
 		
 		
 		default:

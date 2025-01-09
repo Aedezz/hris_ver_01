@@ -108,6 +108,30 @@ $date_create=date("Y-m-d H:i:s");
 			
 			header("Location: ../../?p=departemen");
 		break;		
+
+		case 'barang':			
+			$nama_barang = $_POST['nama_barang'];
+			
+			mysqli_query($koneksi, "INSERT INTO barang (
+				nama_barang
+			) VALUES (
+				'$nama_barang'
+			)");
+			
+			header("Location: ../../?p=barang");
+		break;	
+		
+		case 'item':			
+			$nama_item = $_POST['nama_item'];
+			
+			mysqli_query($koneksi, "INSERT INTO item (
+				nama_item
+			) VALUES (
+				'$nama_item'
+			)");
+			
+			header("Location: ../../?p=item");
+		break;	
 		
 	}
 ?>
